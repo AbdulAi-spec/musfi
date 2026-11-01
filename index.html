@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Happy Birthday Dr. Musfi | With Eternal Love From Abdul Rehman</title>
+  <meta name="description" content="A private romantic birthday celebration and interactive love quiz for my future wife, Dr. Musfi, from Abdul Rehman.">
+  <meta name="theme-color" content="#090c15">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,800;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Ambient Love Particles Canvas -->
+  <canvas id="ambientCanvas"></canvas>
+
+  <!-- Top Ambient Controls -->
+  <header class="app-header">
+    <div class="brand-badge">
+      <span class="cross-icon">👁️‍🗨️</span>
+      <span class="brand-text">Dr. Musfi's Love Clinic</span>
+    </div>
+    <div class="header-actions">
+      <button id="bgmToggleBtn" class="pill-btn music-btn" title="Toggle Romantic Melody">
+        <span class="btn-icon">🎵</span>
+        <span class="btn-label">Music</span>
+      </button>
+      <div class="step-indicator" id="topProgressIndicator">Page 1 / 15</div>
+    </div>
+  </header>
+
+  <main class="main-container">
+    <!-- Screen 0: Welcome / Clinical Prescription Intro -->
+    <section class="quiz-screen active" id="screen-0">
+      <div class="welcome-card glass-panel">
+        <div class="clinic-seal">
+          <div class="seal-inner">
+            <span class="seal-snellen">20/20</span>
+            <span class="seal-sub">LOVE</span>
+          </div>
+        </div>
+        <p class="prescription-serial">RX NO: AM-LOVE-2026-FOREVER • CONFIDENTIAL</p>
+        <h1 class="hero-title">Happy Birthday,<br><span class="highlight-name">Dr. Musfi</span> ❤️</h1>
+        <p class="hero-subtitle">Official Love & Eye Examination prescribed exclusively by <strong>Abdul Rehman</strong> for his gorgeous future wife.</p>
+        
+        <div class="snellen-mini-chart">
+          <div class="chart-row r1">E</div>
+          <div class="chart-row r2">Y E S</div>
+          <div class="chart-row r3">O N • Y O U</div>
+          <div class="chart-row r4">D R • M U S F I</div>
+          <div class="chart-row r5">A B D U L • R E H M A N</div>
+        </div>
+
+        <div class="instructions-box">
+          <p class="instruction-text">✨ <strong>Test Procedure:</strong> Travel through our favorite memories, fast bike rides, secret jokes, and dark romantic fantasies. Answer each question to unlock the next chapter of our story!</p>
+        </div>
+
+        <button class="cta-start-btn" id="startExamBtn">
+          <span>Start Dr. Musfi's Examination</span>
+          <span class="arrow-symbol">→</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Quiz Screen 1: Dr g (Eye Doctor Clinic) -->
+    <section class="quiz-screen" id="screen-1">
+      <div class="question-container glass-panel">
+        <div class="card-header">
+          <span class="category-tag medical">🩺 Ophthalmology Diagnosis</span>
+          <span class="counter-tag">Case 1 of 14</span>
+        </div>
+        <div class="media-layout single-layout">
+          <div class="photo-frame polaroid">
+            <img src="assets/dr-g.jpeg" alt="Dr. Musfi making a cute face at clinic" class="quiz-image" loading="eager">
+            <div class="photo-caption">Dr. Sahiba on duty with that signature pout! 🩺</div>
+          </div>
+        </div>
+        <div class="quiz-content">
+          <h2 class="question-title">According to Dr. Musfi’s professional ophthalmic diagnosis, why do her pupils dilate by 400% whenever Abdul Rehman walks into the room?</h2>
+          <div class="options-grid">
+            <button class="option-btn" data-correct="false" data-opt="A">
+              <span class="opt-letter">A</span>
+              <span class="opt-text">Severe light refraction bouncing off his charming smile ✨</span>
+            </button>
+            <button class="option-btn" data-correct="true" data-opt="B">
+              <span class="opt-letter">B</span>
+              <span class="opt-text">A chronic, 100% incurable case of <em>Abdul-Rehman-itis</em> ❤️</span>
+            </button>
+            <button class="option-btn" data-correct="false" data-opt="C">
+              <span class="opt-letter">C</span>
+              <span class="opt-text">Doctor Sahiba inspecting whether her future husband is behaving himself 🔍</span>
+            </button>
+            <button class="option-btn" data-correct="false" data-opt="D">
+              <span class="opt-letter">D</span>
+              <span class="opt-text">High alert: An imminent romantic attack of cuddles is approaching! 🥰</span>
+            </button>
+          </div>
+          <div class="feedback-box" id="feedback-1">
+            <div class="feedback-badge">👨‍⚕️ Official Doctor's Prescription</div>
+            <p class="feedback-text">Diagnosis 100% Confirmed: Patient Abdul Rehman is officially prescribed lifelong hugs, kisses, and undivided attention from Dr. Musfi!</p>
+            <button class="next-step-btn" data-next="2">Continue To Next Case →</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quiz Screen 2: Graduation Image -->
+    <section class="quiz-screen" id="screen-2">
+      <div class="question-container glass-panel">
+        <div class="card-header">
+          <span class="category-tag medical">🎓 Milestone & Vision Test</span>
+          <span class="counter-tag">Case 2 of 14</span>
+        </div>
+        <div class="media-layout single-layout">
+          <div class="photo-frame polaroid">
+            <img src="assets/graduation.jpeg" alt="Dr. Musfi in graduation gown and cap" class="quiz-image">
+            <div class="photo-caption">The smartest & most gorgeous Eye Doctor in the world! 🎓❤️</div>
+          </div>
+        </div>
+        <div class="quiz-content">
+          <h2 class="question-title">Dr. Musfi graduated with flying colors, but when Abdul Rehman tested her vision, what was the only thing she could see on the eye chart?</h2>
+          <div class="options-grid">
+            <button class="option-btn" data-correct="false" data-opt="A">
+              <span class="opt-letter">A</span>
+              <span class="opt-text">Standard 20/20 vision chart letters</span>
+            </button>
+            <button class="option-btn" data-correct="false" data-opt="B">
+              <span class="opt-letter">B</span>
+              <span class="opt-text">Flashing neon letters spelling: <strong>"A - B - D - U - L"</strong></span>
+            </button>
+            <button class="option-btn" data-correct="true" data-opt="C">
+              <span class="opt-letter">C</span>
+              <span class="opt-text">A radiant future full of love, wedding rings, and adventures together 💍✨</span>
+            </button>
+            <button class="option-btn" data-correct="false" data-opt="D">
+              <span class="opt-letter">D</span>
+              <span class="opt-text">Her handsome boy waiting outside with flowers and a warm embrace 💐</span>
+            </button>
+          </div>
+          <div class="feedback-box" id="feedback-2">
+            <div class="feedback-badge">🌟 Perfect Vision Verified</div>
+            <p class="feedback-text">Verdict: No corrective lenses needed. Your eyes were created to look at Abdul Rehman, and his eyes were created to adore only you!</p>
+            <button class="next-step-btn" data-next="3">Ready for the Bike Ride? →</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quiz Screen 3: Winter Love (Bike Sudden Brake) -->
+    <section class="quiz-screen" id="screen-3">
+      <div class="question-container glass-panel">
+        <div class="card-header">
+          <span class="category-tag speed">🏍️ The Fast Bike Ride</span>
+          <span class="counter-tag">Case 3 of 14</span>
+        </div>
+        <div class="media-layout single-layout">
+          <div class="photo-frame polaroid">
+            <img src="assets/winter-love.jpeg" alt="DR. MUSFI carved in snow on windshield" class="quiz-image">
+            <div class="photo-caption">Dr. Musfi + Cupid's Arrow carved in winter snow ❄️❤️</div>
+          </div>
+        </div>
+        <div class="quiz-content">
+          <h2 class="question-title">When Abdul Rehman accelerates on the bike and taps that sudden front brake, what is Dr. Musfi’s true reaction?</h2>
+          <div class="options-grid">
+            <button class="option-btn" data-correct="false" data-opt="A">
+              <span class="opt-letter">A</span>
+              <span class="opt-text">Scolding him: <em>"Abdul Rehman aahista chalao varna marungi!"</em> 😤</span>
+            </button>
+            <button class="option-btn" data-correct="true" data-opt="B">
+              <span class="opt-letter">B</span>
+              <span class="opt-text">Wrapping both arms tightly around his waist and pressing against his back 🔥</span>
+            </button>
+            <button class="option-btn" data-correct="false" data-opt="C">
+              <span class="opt-letter">C</span>
+              <span class="opt-text">Hiding her cold nose and face deep inside the collar of his jacket 🧥</span>
+            </button>
+            <button class="option-btn" data-correct="false" data-opt="D">
+              <span class="opt-letter">D</span>
+              <span class="opt-text">Secretly enjoying the thrill because it gives an excuse to hold him closer! 😉</span>
+            </button>
+          </div>
+          <div class="feedback-box" id="feedback-3">
+            <div class="feedback-badge">🏍️ Speed Law Certified</div>
+            <p class="feedback-text">Abdul Rehman's Golden Rule: The front brake is officially engineered so Musfi stays locked in his arms forever!</p>
+            <button class="next-step-btn" data-next="4">Next Cozy Ride Secret →</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quiz Screen 4: OOOOOOOO (Late Night Cold Wind & Earphones) -->
+    <section class="quiz-screen" id="screen-4">
+      <div class="question-container glass-panel">
+        <div class="card-header">
+          <span class="category-tag speed">🏍️ Night Ride Moments</span>
+          <span class="counter-tag">Case 4 of 14</span>
+        </div>
+        <div class="media-layout single-layout">
+          <div class="photo-frame polaroid">
+            <img src="assets/night-moments.jpeg" alt="Dr. Musfi in hoodie with earphones" class="quiz-image">
+            <div class="photo-caption">Listening to our songs on cold windy nights 🎧🌙</div>
+          </div>
+        </div>
+        <div class="quiz-content">
+          <h2 class="question-title">On late night chilly bike rides when the cold wind rushes by, what makes our lovely doctor’s heart beat the fastest?</h2>
+          <div class="options-grid">
+            <button class="option-btn" data-correct="false" data-opt="A">
+              <span class="opt-letter">A</span>
+              <span class="opt-text">Tucking her frozen fingers deep into Abdul Rehman’s warm jacket pockets 🧤</span>
+            </button>
+            <button class="option-btn" data-correct="false" data-opt="B">
+              <span class="opt-letter">B</span>
+              <span class="opt-text">Whispering sweet secrets directly into his ear over the engine rumble 💨</span>
+            </button>
+            <button class="option-btn" data-correct="false" data-opt="C">
+              <span class="opt-letter">C</span>
+              <span class="opt-text">Resting her chin on his shoulder and watching the streetlights blur past ✨</span>
+            </button>
+            <button class="option-btn" data-correct="true" data-opt="D">
+              <span class="opt-letter">D</span>
+              <span class="opt-text">Every single one of these, followed by hot late-night chai and endless hugs ☕❤️</span>
+            </button>
+          </div>
+          <div class="feedback-box" id="feedback-4">
+            <div class="feedback-badge">🌙 Midnight Ride Rating: 10/10</div>
+            <p class="feedback-text">Nothing in the entire world compares to having you on the back of my bike, feeling your heartbeat against mine.</p>
+            <button class="next-step-btn" data-next="5">Enter Dark Romantic Mode 🔥 →</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quiz Screen 5: Dual Image (Sweet delicious & your Sweet food) -->
+    <section class="quiz-screen" id="screen-5">
+      <div class="question-container glass-panel dark-romance-mode">
+        <div class="card-header">
+          <span class="category-tag spicy">🔥 Dark Romance & Sweet Marks</span>
+          <span class="counter-tag">Case 5 of 14</span>
+        </div>
+        <div class="media-layout dual-layout">
+          <div class="photo-frame polaroid">
+            <img src="assets/sweet-delicious-kiss.jpeg" alt="Dr. Musfi neck & collarbone" class="quiz-image">
+            <div class="photo-caption">That irresistible sweet spot on her neck... 💋</div>
+          </div>
+          <div class="photo-frame polaroid">
+            <img src="assets/sweet-food-mark.jpeg" alt="Abdul Rehman neck mole - her sweet food" class="quiz-image">
+            <div class="photo-caption">Abdul Rehman's mark: Her official sweet food 🍓</div>
+          </div>
+        </div>
+        <div class="quiz-content">
+          <h2 class="question-title">When Dr. Musfi catches sight of that exact sweet mole on Abdul Rehman’s neck and collarbone, what tempting thought takes over?</h2>
+          <div class="options-grid">
+            <button class="option-btn" data-correct="false" data-opt="A">
+              <span class="opt-letter">A</span>
+              <span class="opt-text">Planting a slow, teasing trail of soft kisses right up to his jawline 💋</span>
+            </button>
+            <button class="option-btn" data-correct="false" data-opt="B">
+              <span class="opt-letter">B</span>
+              <span class="opt-text">Leaving a deep, passionate love bite so the whole world knows he is taken 😈</span>
+            </button>
+            <button class="option-btn" data-correct="false" data-opt="C">
+              <span class="opt-letter">C</span>
+              <span class="opt-text">Whispering seductive words in his ear until his breath completely catches 🔥</span>
+            </button>
+            <button class="option-btn" data-correct="true" data-opt="D">
+              <span class="opt-letter">D</span>
+              <span class="opt-text">Claiming her rightful 'Sweet Food' and absolutely refusing to let him leave bed! 🍓🤤</span>
+            </button>
+          </div>
+          <div class="feedback-box" id="feedback-5">
+            <div class="feedback-badge">🔒 Exclusive Ownership Warning</div>
+            <p class="feedback-text">Medical Warning: This neck and collarbone area is officially reserved under the permanent, exclusive license of Dr. Musfi’s lips!</p>
+            <button class="next-step-btn" data-next="6">Listen To Her Secret Whisper 🎙️ →</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quiz Screen 6: VOICE NOTE INTERACTION (The Eye Doctor's Blindfold Fantasy) -->
+    <section class="quiz-screen" id="screen-6">
+      <div class="question-container glass-panel dark-romance-mode">
+        <div class="card-header">
+          <span class="category-tag spicy">🎙️ Interactive Audio & The Blindfold</span>
+          <span class="counter-tag">Case 6 of 14</span>
+        </div>
+        
+        <div class="media-layout single-layout">
+          <div class="photo-frame polaroid">
+            <img src="assets/first-image-made-for-me.jpeg" alt="First image you made for me" class="quiz-image">
+            <div class="photo-caption">"The very first image you made for me..." ❤️</div>
+          </div>
+        </div>
+
+        <!-- Dedicated Audio Playback Center for Quiz 6 -->
+        <div class="voice-note-player-box" id="voicePlayerContainer">
+          <div class="voice-player-left">
+            <button class="voice-play-btn" id="voicePlayBtn" title="Play Voice Note" aria-label="Play Dr. Musfi's Voice Note">
+              <span class="play-icon" id="playIcon">▶</span>
+            </button>
+            <div class="voice-pulse-ring" id="pulseRing"></div>
+          </div>
+          <div class="voice-player-right">
+            <div class="voice-tag">🎧 Dr. Musfi's Secret Whisper</div>
+            <div class="voice-desc">Tap the play button to hear what she whispered into Abdul Rehman's ear...</div>
+            <div class="wave-visualizer" id="waveVisualizer">
+              <span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span>
+              <span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span>
+              <span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </div>
+            <div class="voice-transcript" id="voiceTranscript">"Abdul Rehman..." 💖</div>
+          </div>
+          <audio id="whisperAudio" preload="auto" playsinline>
+            <source src="assets/first-voice-note.mp3" type="audio/mp3">
+            <source src="assets/first-voice-note.ogg" type="audio/ogg">
+          </audio>
+        </div>
+
+        <div class="quiz-content">
+          <h2 class="question-title">They say an Eye Doctor values vision above all else... so when Abdul Rehman brings out a silk blindfold in a candlelit room, why does Dr. Musfi gladly surrender her eyes?</h2>
+          <div class="options-grid">
+            <button class="option-btn" data-correct="false" data-opt="A">
+              <span class="opt-letter">A</span>
+              <span class="opt-text">Because when you can't see, every touch and kiss becomes 10x more electric 🔥</span>
+            </button>
+            <button class="option-btn" data-correct="false" data-opt="B">
+              <span class="opt-letter">B</span>
+              <span class="opt-text">Because she secretly loves when Abdul Rehman takes full, breathless dominant control 🖤</span>
+            </button>
+            <button class="option-btn" data-correct="false" data-opt="C">
+              <span class="opt-letter">C</span>
+              <span class="opt-text">Because hearing him whisper her name in the dark makes her shiver with desire 🫦</span>
+            </button>
+            <button class="option-btn" data-correct="true" data-opt="D">
+              <span class="opt-letter">D</span>
+              <span class="opt-text">Every single one of the above — no mercy, total surrender to each other tonight! 🔐❤️</span>
+            </button>
+          </div>
+          <div class="feedback-box" id="feedback-6">
+            <div class="feedback-badge">🔥 Dark Room Protocol</div>
+            <p class="feedback-text">When Dr. Musfi's eyes are in the dark, every sensation, every touch, and every whispered breath belongs entirely to Abdul Rehman.</p>
+            <button class="next-step-btn" data-next="7">Next Sweet Craving 🍫 →</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quiz Screen 7: Ice Cream Bar -->
+    <section class="quiz-screen" id="screen-7">
+      <div class="question-container glass-panel">
+        <div class="card-header">
+          <span class="category-tag playful">🍫 Sweet Temptation</span>
+          <span class="counter-tag">Case 7 of 14</span>
+        </div>
+        <div class="media-layout single-layout">
+          <div class="photo-frame polaroid">
+            <img src="assets/ice-cream.jpeg" alt="Dr. Musfi eating chocolate ice cream" class="quiz-image">
+            <div class="photo-caption">Those innocent eyes with that chocolate ice cream... 🍫👀</div>
+          </div>
+        </div>
+        <div class="quiz-content">
+          <h2 class="question-title">Looking at Dr. Musfi enjoying this chocolate ice cream with those huge innocent eyes... what was really running through Abdul Rehman’s mind?</h2>
+          <div class="options-grid">
+            <button class="option-btn" data-correct="false" data-opt="A">
+              <span class="opt-letter">A</span>
+              <span class="opt-text"><em>"Masha'Allah kitni masoom aur pyari lag rahi hai"</em> 😇</span>
+            </button>
+            <button class="option-btn" data-correct="false" data-opt="B">
+              <span class="opt-letter">B</span>
+              <span class="opt-text"><em>"She has no idea what wicked thoughts she is putting in my head right now..."</em> 😈</span>
+            </button>
+            <button class="option-btn" data-correct="false" data-opt="C">
+              <span class="opt-letter">C</span>
+              <span class="opt-text"><em>"Forget that ice cream bar, I need to taste those sweet lips immediately"</em> 💋</span>
+            </button>
+            <button class="option-btn" data-correct="true" data-opt="D">
+              <span class="opt-letter">D</span>
+              <span class="opt-text">Both B & C with 100% scientific certainty! 🔥🤤</span>
+            </button>
+          </div>
+          <div class="feedback-box" id="feedback-7">
+            <div class="feedback-badge">🍨 Sugar Level Dangerously High</div>
+            <p class="feedback-text">Some cravings simply cannot be satisfied with ice cream... you know exactly who satisfies that hunger!</p>
+            <button class="next-step-btn" data-next="8">The Legendary Tang Meme 😂 →</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quiz Screen 8: Tang Meme -->
+    <section class="quiz-screen" id="screen-8">
+      <div class="question-container glass-panel">
+        <div class="card-header">
+          <span class="category-tag funny">😂 Hilarious Flirt Memes</span>
+          <span class="counter-tag">Case 8 of 14</span>
+        </div>
+        <div class="media-layout single-layout">
+          <div class="photo-frame polaroid">
+            <img src="assets/tang-meme.jpeg" alt="Apki Tang Uthalu baby meme" class="quiz-image">
+            <div class="photo-caption">The legendary flirty meme that broke all records! 🍊💥</div>
+          </div>
+        </div>
+        <div class="quiz-content">
+          <h2 class="question-title">When the infamous meme <em>"Apki [Tang] Uthalu baby"</em> was dropped, what was the officially enacted punishment for being too seductive?</h2>
+          <div class="options-grid">
+            <button class="option-btn" data-correct="false" data-opt="A">
+              <span class="opt-letter">A</span>
+              <span class="opt-text">A fine of 50 non-stop kisses delivered immediately on the spot 💋</span>
+            </button>
+            <button class="option-btn" data-correct="false" data-opt="B">
+              <span class="opt-letter">B</span>
+              <span class="opt-text">Being swept up into his arms and thrown straight onto the mattress 🛌</span>
+            </button>
+            <button class="option-btn" data-correct="false" data-opt="C">
+              <span class="opt-letter">C</span>
+              <span class="opt-text">Negotiating a peace treaty with the feared Mafia Don Musfi 🤝</span>
+            </button>
+            <button class="option-btn" data-correct="true" data-opt="D">
+              <span class="opt-letter">D</span>
+              <span class="opt-text">Complete, unconditional surrender with zero complaints! 🍊❤️</span>
+            </button>
+          </div>
+          <div class="feedback-box" id="feedback-8">
+            <div class="feedback-badge">🍊 Tang Court Ruling</div>
+            <p class="feedback-text">Court Ruling: Dr. Musfi is found guilty of being dangerously irresistible. Penalty: Lifetime imprisonment in Abdul Rehman's arms!</p>
+            <button class="next-step-btn" data-next="9">Meet the Underworld Boss 😎 →</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quiz Screen 9: Chota Don -->
+    <section class="quiz-screen" id="screen-9">
+      <div class="question-container glass-panel">
+        <div class="card-header">
+          <span class="category-tag funny">😎 The Underworld Boss</span>
+          <span class="counter-tag">Case 9 of 14</span>
+        </div>
+        <div class="media-layout single-layout">
+          <div class="photo-frame polaroid">
+            <img src="assets/chota-don.jpeg" alt="Chota don snapchat filter" class="quiz-image">
+            <div class="photo-caption">Bhai of the city: Don Dr. Musfi 🕶️🧔</div>
+          </div>
+        </div>
+        <div class="quiz-content">
+          <h2 class="question-title">Behind this tough gangster bearded 'Chota Don' persona, what is her deepest, darkest secret?</h2>
+          <div class="options-grid">
+            <button class="option-btn" data-correct="false" data-opt="A">
+              <span class="opt-letter">A</span>
+              <span class="opt-text">She actually runs the most dangerous cartel in town 😎🔫</span>
+            </button>
+            <button class="option-btn" data-correct="true" data-opt="B">
+              <span class="opt-letter">B</span>
+              <span class="opt-text">She is Abdul Rehman’s spoiled, soft baby who melts into a puddle after two sweet words 🥺❤️</span>
+            </button>
+            <button class="option-btn" data-correct="false" data-opt="C">
+              <span class="opt-letter">C</span>
+              <span class="opt-text">She uses that mustache filter to look intimidating when she wants ice cream 🍦</span>
+            </button>
+            <button class="option-btn" data-correct="false" data-opt="D">
+              <span class="opt-letter">D</span>
+              <span class="opt-text">She is secretly planning to kidnap Abdul Rehman and keep him forever 🔐</span>
+            </button>
+          </div>
+          <div class="feedback-box" id="feedback-9">
+            <div class="feedback-badge">🕵️ Don's Dossier Unlocked</div>
+            <p class="feedback-text">Chota Don's only known weakness: Abdul Rehman running his fingers through her hair and pulling her close!</p>
+            <button class="next-step-btn" data-next="10">Princess vs Kitty Mode 🌸 →</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quiz Screen 10: Dual Image (cute princes & cutiiiii) -->
+    <section class="quiz-screen" id="screen-10">
+      <div class="question-container glass-panel">
+        <div class="card-header">
+          <span class="category-tag cute">🌸 Pure Cuteness Overload</span>
+          <span class="counter-tag">Case 10 of 14</span>
+        </div>
+        <div class="media-layout dual-layout">
+          <div class="photo-frame polaroid">
+            <img src="assets/cute-princess.jpeg" alt="Cute princess with white flower" class="quiz-image">
+            <div class="photo-caption">The sweetest princess in her own kingdom 👑🌸</div>
+          </div>
+          <div class="photo-frame polaroid">
+            <img src="assets/cute-kitty.jpeg" alt="Neon cat whiskers filter" class="quiz-image">
+            <div class="photo-caption">Her playful neon kitty alter-ego 🐱✨</div>
+          </div>
+        </div>
+        <div class="quiz-content">
+          <h2 class="question-title">Between the gentle flower princess and the playful neon doodle kitty, which Dr. Musfi stole Abdul Rehman’s heart?</h2>
+          <div class="options-grid">
+            <button class="option-btn" data-correct="false" data-opt="A">
+              <span class="opt-letter">A</span>
+              <span class="opt-text">The soft, graceful princess whose innocent smile lights up the room 🌸</span>
+            </button>
+            <button class="option-btn" data-correct="false" data-opt="B">
+              <span class="opt-letter">B</span>
+              <span class="opt-text">The naughty, adorable kitty who loves teasing him with crazy filters 🐱</span>
+            </button>
+            <button class="option-btn" data-correct="true" data-opt="C">
+              <span class="opt-letter">C</span>
+              <span class="opt-text">Both! Every single mood, face, and crazy moment she shares with him ❤️</span>
+            </button>
+            <button class="option-btn" data-correct="false" data-opt="D">
+              <span class="opt-letter">D</span>
+              <span class="opt-text">Whichever one is currently asking him for forehead kisses 😘</span>
+            </button>
+          </div>
+          <div class="feedback-box" id="feedback-10">
+            <div class="feedback-badge">👑 Royal Approval</div>
+            <p class="feedback-text">Princess or naughty cat, every version of Dr. Musfi is Abdul Rehman's favorite person in this universe.</p>
+            <button class="next-step-btn" data-next="11">How to Wake Sleeping Beauty? 😴 →</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quiz Screen 11: Sleeping Beauty -->
+    <section class="quiz-screen" id="screen-11">
+      <div class="question-container glass-panel">
+        <div class="card-header">
+          <span class="category-tag romantic">😴 Sleeping Beauty Syndrome</span>
+          <span class="counter-tag">Case 11 of 14</span>
+        </div>
+        <div class="media-layout single-layout">
+          <div class="photo-frame polaroid">
+            <img src="assets/sleeping-beauty.jpeg" alt="Dr. Musfi sleeping peacefully" class="quiz-image">
+            <div class="photo-caption">Sleeping peacefully like a cute little angel 🕊️💤</div>
+          </div>
+        </div>
+        <div class="quiz-content">
+          <h2 class="question-title">What is the officially approved medical procedure to wake up Dr. Musfi when she is sleeping like this?</h2>
+          <div class="options-grid">
+            <button class="option-btn" data-correct="false" data-opt="A">
+              <span class="opt-letter">A</span>
+              <span class="opt-text">A brutally loud smartphone alarm clock ⏰❌</span>
+            </button>
+            <button class="option-btn" data-correct="true" data-opt="B">
+              <span class="opt-letter">B</span>
+              <span class="opt-text">Softly whispering <em>"Happy Birthday, Dr. Sahiba"</em> with kisses on her forehead, eyelids, and nose 🌸💋</span>
+            </button>
+            <button class="option-btn" data-correct="false" data-opt="C">
+              <span class="opt-letter">C</span>
+              <span class="opt-text">Serving breakfast in bed with hot steaming tea before she opens her eyes ☕</span>
+            </button>
+            <button class="option-btn" data-correct="false" data-opt="D">
+              <span class="opt-letter">D</span>
+              <span class="opt-text">Gently pulling her into a warm morning embrace until she wakes up with a smile 🥰</span>
+            </button>
+          </div>
+          <div class="feedback-box" id="feedback-11">
+            <div class="feedback-badge">🕊️ Medical Sleep Protocol</div>
+            <p class="feedback-text">Strict Order: Zero loud noises permitted. Only gentle whispers, warm embraces, and sweet kisses for our sleepy doctor!</p>
+            <button class="next-step-btn" data-next="12">The Secret of the Watch & Necklace ⌚ →</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quiz Screen 12: Dual Image (first gify & Gift-image) -->
+    <section class="quiz-screen" id="screen-12">
+      <div class="question-container glass-panel">
+        <div class="card-header">
+          <span class="category-tag romantic">💍 First Gifts & Eternal Promises</span>
+          <span class="counter-tag">Case 12 of 14</span>
+        </div>
+        <div class="media-layout dual-layout">
+          <div class="photo-frame polaroid">
+            <img src="assets/first-gift-watch.jpeg" alt="Two-tone watch gift" class="quiz-image">
+            <div class="photo-caption">The very first gift: Elegant two-tone watch ⌚</div>
+          </div>
+          <div class="photo-frame polaroid">
+            <img src="assets/gift-necklace.jpeg" alt="Dr. Musfi wearing the gift necklace" class="quiz-image">
+            <div class="photo-caption">Wearing her sparkling gift necklace with elegance ✨</div>
+          </div>
+        </div>
+        <div class="quiz-content">
+          <h2 class="question-title">What was the true unwritten message Abdul Rehman gave Musfi with this first watch and necklace?</h2>
+          <div class="options-grid">
+            <button class="option-btn" data-correct="false" data-opt="A">
+              <span class="opt-letter">A</span>
+              <span class="opt-text"><em>"Now Doctor Sahiba has no excuse to be late for our bike dates!"</em> ⌚</span>
+            </button>
+            <button class="option-btn" data-correct="true" data-opt="B">
+              <span class="opt-letter">B</span>
+              <span class="opt-text"><em>"Every ticking second of my future belongs to you, and my heart rests right on your neck."</em> 💖</span>
+            </button>
+            <button class="option-btn" data-correct="false" data-opt="C">
+              <span class="opt-letter">C</span>
+              <span class="opt-text"><em>"Just wanted to see that breathtaking glow on her face when she unboxed it."</em> ✨</span>
+            </button>
+            <button class="option-btn" data-correct="false" data-opt="D">
+              <span class="opt-letter">D</span>
+              <span class="opt-text">A promise that every year ahead will bring even grander surprises 🎁</span>
+            </button>
+          </div>
+          <div class="feedback-box" id="feedback-12">
+            <div class="feedback-badge">⏳ Timeless Bond</div>
+            <p class="feedback-text">Watches measure seconds, but my love for you has no timeline. It started from our first hello and will last forever.</p>
+            <button class="next-step-btn" data-next="13">Family & Celebrations 🏡 →</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quiz Screen 13: Dual Image (first home visit & Mera name musfi hyy) -->
+    <section class="quiz-screen" id="screen-13">
+      <div class="question-container glass-panel">
+        <div class="card-header">
+          <span class="category-tag family">🏡 Home Visits & Heartbeats</span>
+          <span class="counter-tag">Case 13 of 14</span>
+        </div>
+        <div class="media-layout dual-layout">
+          <div class="photo-frame polaroid">
+            <img src="assets/first-home-visit.jpeg" alt="First home visit with family" class="quiz-image">
+            <div class="photo-caption">First home visit — our families and blessings together 🏡❤️</div>
+          </div>
+          <div class="photo-frame polaroid">
+            <img src="assets/mera-name-musfi.jpeg" alt="Dr. Musfi under celebratory balloon arch" class="quiz-image">
+            <div class="photo-caption">"Mera naam Musfi hai" — celebrating with balloons & joy 🎈</div>
+          </div>
+        </div>
+        <div class="quiz-content">
+          <h2 class="question-title">Looking back at that unforgettable first home visit and family smiles, what made Abdul Rehman's heart feel so complete?</h2>
+          <div class="options-grid">
+            <button class="option-btn" data-correct="false" data-opt="A">
+              <span class="opt-letter">A</span>
+              <span class="opt-text">Seeing how naturally and beautifully she fits into our lives and family 🤲</span>
+            </button>
+            <button class="option-btn" data-correct="false" data-opt="B">
+              <span class="opt-letter">B</span>
+              <span class="opt-text">Her shy, radiant smile while holding her phone in that warm winter shawl 🧣</span>
+            </button>
+            <button class="option-btn" data-correct="false" data-opt="C">
+              <span class="opt-letter">C</span>
+              <span class="opt-text">Knowing with 100% certainty: <em>"This is my future wife. This is my home."</em> 💍</span>
+            </button>
+            <button class="option-btn" data-correct="true" data-opt="D">
+              <span class="opt-letter">D</span>
+              <span class="opt-text">All of the above — it felt like Allah had answered every single prayer! 🤲❤️</span>
+            </button>
+          </div>
+          <div class="feedback-box" id="feedback-13">
+            <div class="feedback-badge">🏡 The Truest Blessing</div>
+            <p class="feedback-text">Seeing you in my home wasn't just a visit — it was a glimpse of our forever paradise together.</p>
+            <button class="next-step-btn" data-next="14">The Grand Final Question 👰 →</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quiz Screen 14: Dual Image (first date & mera bacha - The Grand Finale Question) -->
+    <section class="quiz-screen" id="screen-14">
+      <div class="question-container glass-panel">
+        <div class="card-header">
+          <span class="category-tag bride">👰 From First Date to Future Wife</span>
+          <span class="counter-tag">Case 14 of 14</span>
+        </div>
+        <div class="media-layout dual-layout">
+          <div class="photo-frame polaroid">
+            <img src="assets/first-date.jpeg" alt="First date selfie on the bus" class="quiz-image">
+            <div class="photo-caption">Where it started: Cheeky first date on the bus 🚌❤️</div>
+          </div>
+          <div class="photo-frame polaroid">
+            <img src="assets/mera-bacha-bride.jpeg" alt="Dr. Musfi in red dress with floral gajras" class="quiz-image">
+            <div class="photo-caption">"Mera Bacha" — Stunning future bride in red & gajras 🌹👰</div>
+          </div>
+        </div>
+        <div class="quiz-content">
+          <h2 class="question-title">From that silly, laughing first date on the bus to this breathtaking future bride in red and floral gajras... what is Abdul Rehman’s lifelong pledge to Dr. Musfi on this birthday?</h2>
+          <div class="options-grid">
+            <button class="option-btn" data-correct="false" data-opt="A">
+              <span class="opt-letter">A</span>
+              <span class="opt-text">To be her rider, protector, and best friend on every road life takes us on 🏍️🛡️</span>
+            </button>
+            <button class="option-btn" data-correct="false" data-opt="B">
+              <span class="opt-letter">B</span>
+              <span class="opt-text">To make her laugh until her eyes crinkle and wipe away every worry 😊💖</span>
+            </button>
+            <button class="option-btn" data-correct="false" data-opt="C">
+              <span class="opt-letter">C</span>
+              <span class="opt-text">To love, honor, spoil, and worship her with every breath until our final days 💍🌹</span>
+            </button>
+            <button class="option-btn" data-correct="true" data-opt="D">
+              <span class="opt-letter">D</span>
+              <span class="opt-text">EVERY SINGLE PROMISE, sealed with all my soul forever and ever! ❤️🔐</span>
+            </button>
+          </div>
+          <div class="feedback-box" id="feedback-14">
+            <div class="feedback-badge">🎂 Grand Birthday Examination Passed!</div>
+            <p class="feedback-text">Dr. Musfi, you have successfully cleared every love test with a 100% score! It’s time for your grand birthday celebration!</p>
+            <button class="next-step-btn unlock-btn" id="unlockCelebrationBtn">Blow Birthday Candles & Open Letter 🎂🎉 →</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screen 15: Grand Celebration, Birthday Cake, & Love Letter -->
+    <section class="quiz-screen" id="screen-15">
+      <div class="celebration-card glass-panel">
+        <div class="celebration-sparkles">✨ 🎉 🎈 🎂 💖</div>
+        <p class="prescription-serial">OFFICIAL CERTIFICATE OF ETERNAL LOVE • LIFELONG VALIDITY</p>
+        <h1 class="celebration-title">Happy Birthday, My Future Wife!</h1>
+        <h2 class="celebration-subtitle">Dr. Musfi Abdul Rehman ❤️</h2>
+
+        <!-- Interactive Birthday Cake with Candle -->
+        <div class="cake-container">
+          <div class="cake-body">
+            <div class="candle" id="birthdayCandle" title="Tap to blow out the candle!" aria-label="Birthday Candle">
+              <div class="flame" id="candleFlame"></div>
+            </div>
+            <div class="frosting"></div>
+            <div class="cake-tier tier-top"></div>
+            <div class="cake-tier tier-bottom"></div>
+          </div>
+          <p class="candle-instruction" id="candleHint">✨ Tap the candle flame to make a birthday wish!</p>
+        </div>
+
+        <!-- The Emotional Love Letter from Abdul Rehman -->
+        <div class="love-letter-box">
+          <div class="letter-stamp">
+            <span>LOVE</span>
+            <span>2026</span>
+          </div>
+          <h3 class="letter-heading">To My Gorgeous Eye Doctor, My Sweetest Baby, My Musfi...</h3>
+          <div class="letter-body">
+            <p>Happy Birthday, my love! Seeing you smile in each of these photos — from your goofy faces with funny filters to your proud graduation in that doctor's gown, and that breathtaking portrait in red with floral gajras — reminds me how blessed I am to have you as my future wife.</p>
+            <p>You heal and bring light to people's eyes every single day with your profession, but to me, you are the entire light of my world. Every bike ride where you hold onto my waist, every time you whisper my name, and every sweet tease over collarbone marks and late-night talks is permanently etched in my soul.</p>
+            <p>I promise to stand by you in every storm, to ride fast when you want thrill and brake gentle when you want to lean in, to protect your beautiful heart, and to spend every upcoming birthday making you the happiest girl alive.</p>
+            <p class="letter-signature">Forever & Always Yours,<br><strong>Abdul Rehman</strong> ❤️</p>
+          </div>
+        </div>
+
+        <!-- Memory Gallery Modal Trigger -->
+        <div class="celebration-actions">
+          <button class="pill-btn restart-btn" id="restartQuizBtn">
+            <span>↺ Retake Memory Journey</span>
+          </button>
+          <button class="pill-btn replay-voice-btn" id="replayVoiceBtn">
+            <span>🎙️ Replay Her Whisper</span>
+          </button>
+        </div>
+
+        <!-- Extra Photos Showcase Grid -->
+        <div class="album-preview-section">
+          <h4 class="album-title">Our Sacred Memory Capsule</h4>
+          <div class="album-grid">
+            <div class="album-item"><img src="assets/lovely.jpeg" alt="Lovely"><span class="album-lbl">Golden Hour Glow</span></div>
+            <div class="album-item"><img src="assets/cute-luminous.jpeg" alt="Cute"><span class="album-lbl">Luminous Eyes</span></div>
+            <div class="album-item"><img src="assets/chubby.jpeg" alt="Chubby"><span class="album-lbl">Sweet Cheeks</span></div>
+            <div class="album-item"><img src="assets/winter-love.jpeg" alt="Winter"><span class="album-lbl">Dr. Musfi in Snow</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <p>Handcrafted with endless love by Abdul Rehman for Dr. Musfi • Happy Birthday ❤️</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
