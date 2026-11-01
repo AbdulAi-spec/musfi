@@ -17,6 +17,43 @@
   <!-- Ambient Love Particles Canvas -->
   <canvas id="ambientCanvas"></canvas>
 
+  <!-- Password Lock Screen Overlay -->
+  <div id="passwordLockScreen" class="lock-screen-overlay">
+    <div class="lock-card glass-panel">
+      <div class="lock-icon-wrap">
+        <span class="lock-icon">🔐</span>
+        <div class="lock-pulse"></div>
+      </div>
+      <p class="lock-serial">IDENTITY VERIFICATION REQUIRED • CLINICAL FILE AM-2026</p>
+      <h2 class="lock-title">Doctor Sahiba's Access Code</h2>
+      <p class="lock-subtitle">To open this secret birthday celebration, enter the special date we met for the very first time...</p>
+      
+      <form class="password-form" id="passwordForm" onsubmit="return false;">
+        <div class="input-wrapper">
+          <input 
+            type="text" 
+            id="passwordInput" 
+            class="password-input" 
+            placeholder="e.g. 23 Oct 2026" 
+            autocomplete="off" 
+            autocorrect="off" 
+            autocapitalize="off" 
+            spellcheck="false"
+            required
+          >
+          <span class="input-icon">📅</span>
+        </div>
+        <button type="submit" id="unlockBtn" class="unlock-access-btn">
+          <span>Unlock My Heart</span>
+          <span class="btn-arrow">🔓</span>
+        </button>
+      </form>
+
+      <p class="lock-hint" id="lockHintText">Hint: The date of our first magical encounter in 2026 ❤️</p>
+      <p class="lock-error" id="lockErrorMsg"></p>
+    </div>
+  </div>
+
   <!-- Top Ambient Controls -->
   <header class="app-header">
     <div class="brand-badge">

@@ -12,6 +12,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const restartQuizBtn = document.getElementById('restartQuizBtn');
   const replayVoiceBtn = document.getElementById('replayVoiceBtn');
   
+  // Password Lock Screen Elements
+  const passwordLockScreen = document.getElementById('passwordLockScreen');
+  const passwordForm = document.getElementById('passwordForm');
+  const passwordInput = document.getElementById('passwordInput');
+  const unlockBtn = document.getElementById('unlockBtn');
+  const lockCard = document.querySelector('.lock-card');
+  const lockErrorMsg = document.getElementById('lockErrorMsg');
+
   // Audio elements
   const whisperAudio = document.getElementById('whisperAudio');
   const voicePlayBtn = document.getElementById('voicePlayBtn');
@@ -32,6 +40,56 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let currentScreenIndex = 0;
   const totalScreens = screens.length; // 16 screens total (0 to 15)
+
+  // -------------------------------------------------------------
+  // Password Lock Verification (23 Oct 2026)
+  // -------------------------------------------------------------
+  function validateSecretDate(val) {
+    if (!val) return false;
+    // Normalize string: lowercase, remove all spaces, slashes, dashes, dots
+    const clean = val.toLowerCase().trim().replace(/[^a-z0-9]/g, '');
+    const validCodes = [
+      '23oct2026',
+      '23october2026',
+      '23102026',
+      '231026',
+      '23oct',
+      '23october',
+      '2310'
+    ];
+    return validCodes.includes(clean);
+  }
+
+  function handleUnlockAttempt(e) {
+    if (e) e.preventDefault();
+    const entered = passwordInput ? passwordInput.value : '';
+
+    if (validateSecretDate(entered)) {
+      if (lockErrorMsg) lockErrorMsg.textContent = "";
+      // Success: animate unlock
+      passwordLockScreen?.classList.add('unlocked');
+      startRomanticMusic();
+      playCelebrationChime();
+      triggerHeartSparkle();
+    } else {
+      // Failed: shake card and display cute romantic hint
+      if (lockCard) {
+        lockCard.classList.remove('shake');
+        void lockCard.offsetWidth; // trigger reflow
+        lockCard.classList.add('shake');
+      }
+      if (lockErrorMsg) {
+        lockErrorMsg.textContent = "Doctor Sahiba, think back to that magical day... (Hint: 23 Oct 2026) ❤️";
+      }
+      if (passwordInput) {
+        passwordInput.focus();
+        passwordInput.select();
+      }
+    }
+  }
+
+  passwordForm?.addEventListener('submit', handleUnlockAttempt);
+  unlockBtn?.addEventListener('click', handleUnlockAttempt);
 
   // -------------------------------------------------------------
   // Screen Navigation
